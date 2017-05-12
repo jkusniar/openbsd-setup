@@ -93,13 +93,13 @@ permit persist :wheel
 permit nopass keepenv root
 ```
 
-* /etc/rc.conf.local - basic: start apm, hotplugd and xdm. Other configs will be added after application installation.
+* /etc/rc.conf.local - basic: start apm, hotplugd and xenodm. Other configs will be added after application installation.
 
 ```
 apmd_flags=-A
 hotplugd_flags=
-multicast=YES
-pkg_scripts=cupsd messagebus avahi_daemon gdm
+pkg_scripts=messagebus postgresql
+xenodm_flags=
 ```
 
 * /etc/mixerctl.conf
