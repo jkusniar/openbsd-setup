@@ -126,7 +126,7 @@ Run `newaliases` afterwards.
 
 ```sh
 # desktop
-pkg_add firefox chromium mplayer libreoffice anacron filezilla hotplug-diskmount cups hplip ubuntu-fonts gimp inkscape shotwell gvfs-smb consolekit2 xfce xfce-extras
+pkg_add firefox chromium mplayer libreoffice anacron filezilla hotplug-diskmount ubuntu-fonts gvfs-smb consolekit2 xfce xfce-extras gimp inkscape shotwell
 # tools
 pkg_add git mercurial subversion postgresql-server unzip jdk go node
 # money
@@ -134,15 +134,15 @@ pkg_add vpnc openvpn rdesktop bash duplicity
 ```
 
 * Configure apps after reading `/usr/local/share/doc/pkg-readmes/`
- * read setup for anacron (set anacrontab and modify roots crontab)
- * read setup for cups (`pkg_scripts=cupsd` in `/etc/rc.conf.local`)
- * read setup for vpnc (sysctls needed)
- * read setup for hotplug-diskmount (config in /etc needed)
+  * read setup for anacron (set anacrontab and modify roots crontab)
+  * run systemwide messagebus for xfce
+  * read setup for vpnc (sysctls needed)
+  * read setup for hotplug-diskmount (config in /etc needed)
 
 ### User
 
 Download all files from this repository to $HOME. Use what makes sense.
-_Fix name/email in .gitconfig_.
+**Fix name/email in .gitconfig**.
 
 ### Updates
 
@@ -154,11 +154,11 @@ _Fix name/email in .gitconfig_.
 #### Applications
 
 * **Current** - `pkg_add -u && pkg_delete -a`
-* **Release** - TODO 
- * ([this?](https://stable.mtier.org/))
- * Firefox: 
- ```
-cd /etc/signify
-doas ftp https://packages.rhaalovely.net/landry-mozilla-pkg.pub
-doas env PKG_PATH=https://packages.rhaalovely.net/pub/OpenBSD/6.1/packages/$(arch -s) pkg_add -u firefox
-```
+* **Release**
+  * ([M:TIER?](https://stable.mtier.org/))
+  * Firefox stable packages: 
+    ```
+    cd /etc/signify
+    doas ftp https://packages.rhaalovely.net/landry-mozilla-pkg.pub
+    doas env PKG_PATH=https://packages.rhaalovely.net/pub/OpenBSD/6.1/packages/$(arch -s) pkg_add -u firefox
+    ```
