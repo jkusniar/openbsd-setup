@@ -76,8 +76,9 @@ bioctl -c C -l /dev/sd0a -k /dev/sd2b softraid0 # use proper disklabel from sd2
   * add `noatime` option on all partitions except swap
   * add `softdep` option to home
 * /etc/login.conf
-  * increase `datasize-max` and `datasize-cur` in `staff` and `default` sections to value RAM - 1GB.
-  * increase `openfiles-max` and `openfiles-cur` in `default` to 4096 on powerful machine
+  * increase `datasize-max` and `datasize-cur` in `default` and `staff` sections to value RAM - 1GB.
+  * increase `openfiles-max` and `openfiles-cur` in `default` to 4096 (browsers + nodejs + jetbrains IDE)
+  * increase `openproc-max` and `openproc-cur` in `default` and `staff` to 1024 (browsers + nodejs + jetbrains IDE)
   * run `cap_mkdb /etc/login.conf`
 
 * /etc/sysctl.conf
