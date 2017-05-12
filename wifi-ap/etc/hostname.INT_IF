@@ -1,0 +1,4 @@
+mediaopt hostap
+nwid NETWORK-NAME 
+wpakey PASSWORD
+inet 192.168.189.1 255.255.255.0

@@ -1,0 +1,12 @@
+# 32 px gap on right
+#gap 0 0 32 0 
+fontname UbuntuMono:bold:size=10:antialias=true
+command terminal xterm
+command lock-screen xlock
+command firefox firefox
+command chrome chrome
+
+# rebind M-Return for hiding windows - conflicting with intellij
+unbind-key M-Return
+bind-key 4-Return window-hide
+
