@@ -162,4 +162,6 @@ Download all files from this repository to $HOME. Use what makes sense.
     cd /etc/signify
     doas ftp https://packages.rhaalovely.net/landry-mozilla-pkg.pub
     doas env PKG_PATH=https://packages.rhaalovely.net/pub/OpenBSD/6.1/packages/$(arch -s) pkg_add -u firefox
+    # or use bin/ff-update.sh to do this
     ```
+
